@@ -13,7 +13,7 @@
                       <div class="row">
                        <div class="col-md-5">
                         <div class="form-group">
-                            <input id="nama" type="text" placeholder="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" username="username" value="{{ old('username') }}" required autofocus>
+                            <input id="username" type="text" placeholder="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
 
                             @if ($errors->has('username'))
                                 <span class="invalid-feedback">
@@ -50,6 +50,15 @@
                        <div class="col-md-7">
                         <div class="form-group">
                             <input id="nama" type="text" placeholder="Nama Lengkap" class="form-control" name="nama" required>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <button class="btn disabled btn-secondary">Jenis Kelamin</button>
+                          </div>
+                          <select name="jenis_kelamin" class="custom-select" id="jenis_kelamin">
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                          </select>
                         </div>
                         <div class="form-group">
                             <input id="telepon" type="text" placeholder="Nomor Telepon" class="form-control" name="telepon" required>
