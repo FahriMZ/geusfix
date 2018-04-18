@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('telepon');
             $table->rememberToken();
             $table->timestamps();
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
         });
     }
 
