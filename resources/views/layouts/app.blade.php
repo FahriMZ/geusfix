@@ -21,11 +21,18 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style type="text/css">
-        h1 { font-family: Kanit; }
+        body { font-family: Kanit; }
+        .btn-primary { 
+            background-color: #3ba8fb;
+            color: white;
+            border: none;
+         }
     </style>
 </head>
 <body>
     <div id="app">
+        @guest
+        @else
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -70,6 +77,7 @@
                 </div>
             </div>
         </nav>
+        @endguest
 
         <main class="py-4">
             @yield('content')
