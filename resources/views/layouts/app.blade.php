@@ -8,10 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'geusfix') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/nprogress.css') }}">
 
     <style type="text/css">
         body { font-family: Kanit; }
@@ -83,5 +84,23 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Script -->
+    <script type="text/javascript" src="{{ asset('js/nprogress.js') }}"></script>
+
+    <!-- Script Top Bar Loading -->
+    <script>
+
+    NProgress.configure({ showSpinner: false });
+    
+    NProgress.start();
+    NProgress.set(0.4);
+    //Increment 
+    var interval = setInterval(function() { NProgress.inc(); }, 1000);
+    $(document).ready(function(){
+        NProgress.done();
+        clearInterval(interval);
+    });
+    </script>
 </body>
 </html>
