@@ -9,13 +9,16 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $primaryKey = 'id_user';
+
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'id_user', 'nama', 'email', 'password', 'username', 'tanggal_lahir', 'alamat', 'telepon', 'jenis_kelamin', 'avatar',
     ];
 
     /**
@@ -26,4 +29,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function userAkses() {
+        return $this->hasOne('App\UserAkses', 'id_user');
+    }
 }

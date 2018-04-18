@@ -7,6 +7,10 @@
         <div class="card">
           <img class="card-img-top" src="{{asset('images/background-img 286x180.jpg')}}" alt="Card image cap">
           <div class="card-body">
+
+            <form action="{{route('login')}}" method="POST">
+                @csrf
+
             <div class="form-group row">
                 <div class="col-md-12">
                     <input id="username" type="text" placeholder="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
@@ -53,6 +57,8 @@
                     </button>
                 </div>
             </div>
+
+            </form>
           </div>
         </div>
       </div>
