@@ -21,6 +21,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/nprogress.css') }}">
 
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css')}}">
+
     <style type="text/css">
         body { font-family: Kanit; }
         .btn-primary { 
@@ -102,5 +105,7 @@
         clearInterval(interval);
     });
     </script>
+
+    @yield('js')
 </body>
 </html>

@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/delete-user/{id}', 'HomeController@deleteUser')->name('delete-user');
+Route::get('/user-akses', 'HomeController@userAkses')->name('user-akses');
+Route::post('/tambah-user-akses/{id}', 'HomeController@tambahUserAkses')->name('set_user_akses');

@@ -20,7 +20,7 @@ class UserAkses extends Model
     	return $this->belongsTo('App\User', 'id_user');
     }
 
-    public function user() {
+    public function hakAkses() {
     	return $this->belongsTo('App\HakAkses', 'id_hak_akses');
     }
 }
