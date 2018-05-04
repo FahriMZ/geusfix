@@ -16,16 +16,18 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/nprogress.css') }}">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/nprogress.css') }}">
 
     <!-- Icon -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css')}}">
 
     <style type="text/css">
-        body { font-family: Kanit; }
+        body { font-family: Muli; }
         .btn-primary { 
             background-color: #3ba8fb;
             color: white;
@@ -35,12 +37,10 @@
 </head>
 <body>
     <div id="app">
-        @guest
-        @else
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'geusfix') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -81,7 +81,6 @@
                 </div>
             </div>
         </nav>
-        @endguest
 
         <main class="py-4">
             @yield('content')

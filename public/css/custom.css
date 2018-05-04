@@ -1,0 +1,144 @@
+html, body {
+	background-color: #f8f8f8;
+	font-family: 'Muli', sans-serif;
+}
+
+.container-custom {
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card-konten {
+  position: relative;
+  margin: 0.5rem 0 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  /* border: 1px solid rgba(0, 0, 0, 0.125); */
+  border-radius: 0.15rem;
+}
+
+.card-konten:hover {
+  box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+  text-decoration: none !important;
+}
+
+.img-card-ct {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+  overflow: hidden;
+}
+.img-card-ct img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover; 
+  transition: all .25s ease;
+} 
+.card-content-ct {
+  text-decoration: none !important;
+  padding:0.5rem 5px 0;
+  text-align:left;
+  font-weight: 15px;
+  font-size: 15px;
+  color: black
+}
+.card-content-ct a {
+  color: #000;
+}
+.card-title-ct {
+  text-decoration: none !important;
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title-ct a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more a {
+  padding:1px;
+  font-weight:200;
+}
+
+.bottom {
+  margin-bottom: 2rem;
+}
+
+.card-text-teknisi {
+  font-size: 15px;
+  color: #6c6c6c;
+}
+
+.card-text-lokasi {
+  font-size: 11px;
+  font-weight: 5px;
+  padding: 0 0.5rem 0 0;
+  color: #6c6c6c;
+}
+
+.image-circle-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0.5rem 0.5rem 0.5rem;
+
+  object-fit: cover;
+  object-position: center right;
+}
+
+.text-rating {
+  font-size: 11px;
+  font-weight: 8px;
+  color: grey;
+}
+
+.text-harga {
+  font-size: 11px;
+  font-weight: 8px;
+  color: #6c6c6c;
+  margin-bottom: 2px;
+}
+.text-harga b {
+  font-size: 15px;
+  font-weight: 20px;
+  color: #fb503b;
+}
+
+.text-judul-iklan {
+  padding: 0;
+  height: 30px;
+  text-align:left;
+  font-weight: 15px;
+  font-size: 15px;
+  color: black
+}
+
+.konten-iklan {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  -webkit-box-flex: 0;
+	-ms-flex: 0 0 20%;
+		flex: 0 0 20%;
+  max-width: 20%;
+}

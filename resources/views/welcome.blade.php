@@ -1,100 +1,264 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Kanit', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                        <a href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    geusfix
-                </div>
-
-                <div class="links">
-                    <p>Sebuah Website Penyedia Jasa Service Online</p>
-                </div>
-            </div>
+@section('content')
+		<div class="container-custom">
+		  <div class="row">
+			<div class="col-md-8">
+			  <center>Promo Utama (Slider)</center>
+			  <img src="http://via.placeholder.com/715x200" class="rounded img-fluid" />
+			</div>
+			<div class="col-md-4">
+			  <center>Promo Terpopuler (hanya 1 gambar)</center>
+			  <img src="http://via.placeholder.com/380x200" class="rounded img-fluid" />
+			</div>
+		  </div>
+		  <div class="row">
+		   <div class="col-md-8 card">
+		  <div class="row">
+			<div class="col-sm-8 bottom">
+			  <center>Kategori</center>
+			  <img src="http://via.placeholder.com/467x175" class="rounded img-fluid" />
+			</div>
+			<div class="col-sm-4 bottom">
+			  <center>Pasien yg sdh melakukan service</center>
+			  <img src="http://via.placeholder.com/215x175" class="rounded img-fluid" />
+			</div>
+			<div class="col-sm-4">
+			  <h1 class="text-center"> 999+ </h1>
+			  <center>Teknisi</center>
+			</div>
+			<div class="col-sm-4">
+			  <h1 class="text-center"> 999+ </h1>
+			  <center>Pasien</center>
+			</div>
+			<div class="col-sm-4">
+			  <h1 class="text-center"> 999+ </h1>
+			  <center>Gadget Telah di Perbaiki</center>
+			</div>
+		  </div>
+		   </div>
+		   <div class="card col-md-3 ml-md-auto">
+			<div class="col-sm-12">
+			  <center>Teknisi Terpopuler</center>
+			  <img src="http://via.placeholder.com/220x330" class="rounded img-fluid" />
+			</div>
+		   </div>
+		  </div>
+		  
+<!--CONTENT HERE-->
+		  <div class="row">
+			<div class="konten-iklan">
+				<div class="card-konten">
+				  <a href="#">
+					<div class="img-card-ct">
+					  <img class="img-fluid" src="{{ asset('images/ss.jpg') }}" />
+					</div>
+					<div class="card-content-ct">
+						<p class="text-judul-iklan">Service Software Android</p>
+				  </a>
+						<p class="text-harga">
+						  Mulai <b>Rp 25.000</b>
+						</p>
+						<p class="text-rating">
+						  <i class="fa fa-heart"></i>&nbsp; 486 &nbsp;&nbsp;&nbsp; 
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  (786)
+						</p>
+					</div>
+					<div class="card-read-more">
+						<div class="media">
+							<a href="#Toko">
+						  <img class="image-circle-profile img-fluid align-self-start" src="{{ asset('images/Official Logo.png') }}">
+						  <div class="media-body">
+							  <span class="card-text-teknisi">resoft_it</span><br>
+							</a>
+							  <span class="card-text-lokasi">
+								<i class="fa fa-map-marker"></i>&nbsp;&nbsp; Bandung Kota <br>
+								<i class="fa fa-wrench float-left">&nbsp; 329x</i>
+							  </span>
+							  <span class="card-text-lokasi float-right">
+								<i class="fa fa-diamond" style="color:#2196f3;"></i>
+							  </span>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="konten-iklan">
+				<div class="card-konten">
+				  <a href="#">
+					<div class="img-card-ct">
+					  <img class="img-fluid" src="{{ asset('images/sdf.jpg') }}" />
+					</div>
+					<div class="card-content-ct">
+						<p class="text-judul-iklan">Jasa Service Laptop</p>
+				  </a>
+						<p class="text-harga">
+						  Mulai <b>Rp 50.000</b>
+						</p>
+						<p class="text-rating">
+						  <i class="fa fa-heart"></i>&nbsp; 66 &nbsp;&nbsp;&nbsp; 
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:;"></i>
+						  (262)
+						</p>
+					</div>
+					<div class="card-read-more">
+						<div class="media">
+							<a href="#Toko">
+						  <img class="image-circle-profile img-fluid align-self-start" src="{{ asset('images/cc.gif') }}">
+						  <div class="media-body">
+							  <span class="card-text-teknisi">r_Comp</span><br>
+							</a>
+							  <span class="card-text-lokasi">
+								<i class="fa fa-map-marker"></i>&nbsp;&nbsp; Jakarta Selatan <br>
+								<i class="fa fa-wrench float-left">&nbsp; 114x</i>
+							  </span>
+							  <span class="card-text-lokasi float-right">
+								<i class="fa fa-diamond" style="color:#;"></i>
+							  </span>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="konten-iklan">
+				<div class="card-konten">
+				  <a href="#">
+					<div class="img-card-ct">
+					  <img class="img-fluid" src="{{ asset('images/fff.jpg') }}" />
+					</div>
+					<div class="card-content-ct">
+						<p class="text-judul-iklan">Replace LCD & Touchscreen Hp & Laptop</p>
+				  </a>
+						<p class="text-harga">
+						  Mulai <b>Rp 50.000</b>
+						</p>
+						<p class="text-rating">
+						  <i class="fa fa-heart"></i>&nbsp; 646 &nbsp;&nbsp;&nbsp; 
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  (562)
+						</p>
+					</div>
+					<div class="card-read-more">
+						<div class="media">
+							<a href="#Toko">
+						  <img class="image-circle-profile img-fluid align-self-start" src="{{ asset('images/hh.gif') }}">
+						  <div class="media-body">
+							  <span class="card-text-teknisi">Lembe_comp</span><br>
+							</a>
+							  <span class="card-text-lokasi">
+								<i class="fa fa-map-marker"></i>&nbsp;&nbsp; Papua Barat <br>
+								<i class="fa fa-wrench float-left">&nbsp; 629x</i>
+							  </span>
+							  <span class="card-text-lokasi float-right">
+								<i class="fa fa-diamond" style="color:#2196f3;"></i>
+							  </span>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="konten-iklan">
+				<div class="card-konten">
+				  <a href="#">
+					<div class="img-card-ct">
+					  <img class="img-fluid" src="{{ asset('images/dd.jpg') }}" />
+					</div>
+					<div class="card-content-ct">
+						<p class="text-judul-iklan">Jasa Service Hp , Laptop dan PC</p>
+				  </a>
+						<p class="text-harga">
+						  Mulai <b>Rp 100.000</b>
+						</p>
+						<p class="text-rating">
+						  <i class="fa fa-heart"></i>&nbsp; 446 &nbsp;&nbsp;&nbsp; 
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  (352)
+						</p>
+					</div>
+					<div class="card-read-more">
+						<div class="media">
+							<a href="#Toko">
+						  <img class="image-circle-profile img-fluid align-self-start" src="{{ asset('images/dante.gif') }}">
+						  <div class="media-body">
+							  <span class="card-text-teknisi">danteV</span><br>
+							</a>
+							  <span class="card-text-lokasi">
+								<i class="fa fa-map-marker"></i>&nbsp;&nbsp; Nusa Tenggara Timur <br>
+								<i class="fa fa-wrench float-left">&nbsp; 337x</i>
+							  </span>
+							  <span class="card-text-lokasi float-right">
+								<i class="fa fa-diamond" style="color:#2196f3;"></i>
+							  </span>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="konten-iklan">
+				<div class="card-konten">
+				  <a href="#">
+					<div class="img-card-ct">
+					  <img class="img-fluid" src="{{ asset('images/ll.jpg') }}" />
+					</div>
+					<div class="card-content-ct">
+						<p class="text-judul-iklan">SERVICE HP NOKIA LUMIA profesional murah</p>
+				  </a>
+						<p class="text-harga">
+						  Mulai <b>Rp 12.345</b>
+						</p>
+						<p class="text-rating">
+						  <i class="fa fa-heart"></i>&nbsp; 215 &nbsp;&nbsp;&nbsp; 
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#fec112;"></i>
+						  <i class="fa fa-star" style="color:#;"></i>
+						  (132)
+						</p>
+					</div>
+					<div class="card-read-more">
+						<div class="media">
+							<a href="#Toko">
+						  <img class="image-circle-profile img-fluid align-self-start" src="{{ asset('images/gg.jpg') }}">
+						  <div class="media-body">
+							  <span class="card-text-teknisi">MRibell</span><br>
+							</a>
+							  <span class="card-text-lokasi">
+								<i class="fa fa-map-marker"></i>&nbsp;&nbsp; Nangroe Aceh Darussalam <br>
+								<i class="fa fa-wrench float-left">&nbsp; 153x</i>
+							  </span>
+							  <span class="card-text-lokasi float-right">
+								<i class="fa fa-diamond" style="color:#;"></i>
+							  </span>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		  </div>
         </div>
-    </body>
-</html>
+		<br>
+		<br>
+@stop

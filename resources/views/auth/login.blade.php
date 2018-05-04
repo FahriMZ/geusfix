@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card">
-          <img class="card-img-top" src="{{asset('images/background-img 286x180.jpg')}}" alt="Card image cap">
+		  <div class="card-header">{{ __('Login') }}</div>
           <div class="card-body">
 
             <form action="{{route('login')}}" method="POST">
